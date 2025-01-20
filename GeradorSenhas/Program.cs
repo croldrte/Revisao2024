@@ -38,27 +38,26 @@ while (temEspeciais != "S" && temEspeciais != "N")
     temEspeciais = Console.ReadLine().ToUpper();
 }
 
-double qtdNumeros = 0, qtdLetras, qtdEspeciais;
-char[] numerosSenha = new char[qtdCaracteres - 1];
+int qtdNumeros, qtdLetras, qtdEspeciais;
 Random aleatorio = new Random();
 
 if (temLetras == "S" && temEspeciais == "S")
 {
-    qtdNumeros = Math.Round(qtdCaracteres * .5, 0);
-    qtdLetras = Math.Round(qtdCaracteres * .3, 0);
-    qtdEspeciais = Math.Round(qtdCaracteres * .2, 0);
+    qtdNumeros = (int)Math.Round(qtdCaracteres * .5, 0);
+    qtdLetras = (int)Math.Round(qtdCaracteres * .3, 0);
+    qtdEspeciais = (int)Math.Round(qtdCaracteres * .2, 0);
 }
 else if (temLetras == "S" && temEspeciais == "N")
 {
-    qtdNumeros = Math.Round(qtdCaracteres * .6, 0);
-    qtdLetras = Math.Round(qtdCaracteres * .4, 0);
+    qtdNumeros = (int)Math.Round(qtdCaracteres * .6, 0);
+    qtdLetras = (int)Math.Round(qtdCaracteres * .4, 0);
     qtdEspeciais = 0;
 }
 else if (temLetras == "N" && temEspeciais == "S")
 {
-    qtdNumeros = Math.Round(qtdCaracteres * .7, 0);
+    qtdNumeros = (int)Math.Round(qtdCaracteres * .7, 0);
     qtdLetras = 0;
-    qtdEspeciais = Math.Round(qtdCaracteres * .3, 0);
+    qtdEspeciais = (int)Math.Round(qtdCaracteres * .3, 0);
 }
 else
 {
@@ -67,13 +66,29 @@ else
     qtdEspeciais = 0;
 }
 
-for (int s = 0; s <= qtdNumeros - 1; s++)
-{
-    int numeroAleatorio = aleatorio.Next(numeros.Length);
-    numerosSenha[s] = letras[numeroAleatorio];
-}
+char[] numerosSenha = new char[qtdNumeros];
+char[] letrasSenha = new char[qtdCaracteres - 1];
+char[] especiaisSenha = new char[qtdCaracteres - 1];
 
+for (int q = 0; q <= qtdNumeros - 1; q++)
+{
+    int numeroAleatorio = aleatorio.Next(numeros.Length - 1);
+    numerosSenha[q] = numeros[numeroAleatorio];
+}
 foreach (char n in numerosSenha)
 {
     Console.WriteLine(n);
+}
+
+if (temLetras == "S")
+{
+    for (int q = 0; q <= qtdLetras - 1; q++)
+    {
+        int numeroAleatorio = aleatorio.Next(letras.Length - 1);
+        letrasSenha[q] = letras[numeroAleatorio];
+    }
+    foreach (char l in letrasSenha)
+    {
+        Console.WriteLine(l);
+    }
 }
