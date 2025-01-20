@@ -67,8 +67,8 @@ else
 }
 
 char[] numerosSenha = new char[qtdNumeros];
-char[] letrasSenha = new char[qtdCaracteres - 1];
-char[] especiaisSenha = new char[qtdCaracteres - 1];
+char[] letrasSenha = new char[qtdLetras];
+char[] especiaisSenha = new char[qtdEspeciais];
 
 for (int q = 0; q <= qtdNumeros - 1; q++)
 {
@@ -80,15 +80,22 @@ foreach (char n in numerosSenha)
     Console.WriteLine(n);
 }
 
-if (temLetras == "S")
+for (int q = 0; q <= qtdLetras - 1; q++)
 {
-    for (int q = 0; q <= qtdLetras - 1; q++)
-    {
-        int numeroAleatorio = aleatorio.Next(letras.Length - 1);
-        letrasSenha[q] = letras[numeroAleatorio];
-    }
-    foreach (char l in letrasSenha)
-    {
-        Console.WriteLine(l);
-    }
+    int numeroAleatorio = aleatorio.Next(letras.Length - 1);
+    letrasSenha[q] = letras[numeroAleatorio];
+}
+foreach (char l in letrasSenha)
+{
+    Console.WriteLine(l);
+}
+
+for (int q = 0; q <= qtdEspeciais - 1; q++)
+{
+    int numeroAleatorio = aleatorio.Next(especiais.Length - 1);
+    especiaisSenha[q] = especiais[numeroAleatorio];
+}
+foreach (char e in especiaisSenha)
+{
+    Console.WriteLine(e);
 }
