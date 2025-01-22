@@ -4,11 +4,38 @@
     --butter: #E7A811;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: 'Yellowtail';
+    font-size: 50pt;
+    color: var(--espresso);
+}
+
+h4 {
+    font-weight: 300;
+    color: #aeaeae;
+}
+
 .navbar {
     background-color: var(--espresso);
     color: var(--fluor);
-    font-family: 'Montserrat';
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 14px
+    font-size: 14px;
+}
+
+.banner {
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.banner img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
