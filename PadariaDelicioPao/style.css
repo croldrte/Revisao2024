@@ -3,3 +3,12 @@
     --espresso: #5A3114;
     --butter: #E7A811;
 }
+
+.navbar {
+    background-color: var(--espresso);
+    color: var(--fluor);
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px
+}
