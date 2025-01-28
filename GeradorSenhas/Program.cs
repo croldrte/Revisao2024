@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-class Program
+﻿class Program
 {
     static void Main()
     {
@@ -20,10 +18,12 @@ class Program
                 case "1":
                     opcaoInvalida = false;
                     GerarSenha();
+                    VoltarAoMenu();
                     break;
                 case "2":
                     opcaoInvalida = false;
                     VisualizarSenhas();
+                    VoltarAoMenu();
                     break;
                 case "0":
                     ExibirTitulo();
@@ -188,12 +188,8 @@ class Program
 
         if (File.Exists("bkp.txt"))
         {
-            using (StreamReader reader = new StreamReader("bkp.txt"))
-            {
-                Console.WriteLine("Senha(s) salva(s):\n");
-                string senhasSalvas = reader.ReadToEnd();
-                Console.WriteLine(senhasSalvas);
-            }
+            Console.WriteLine("Senha(s) salva(s):");
+            Console.WriteLine(File.ReadAllText("bkp.txt"));
         }
         else
         {
@@ -201,6 +197,12 @@ class Program
             Console.WriteLine("Não há senhas salvas no momento.");
             Console.ResetColor();
         }
+    }
+    static void VoltarAoMenu()
+    {
+        Console.Write("Pressione qualquer tecla para continuar...");
+        Console.ReadKey();
+        Main();
     }
     // Limpa a tela e exibe o título do programa
     static void ExibirTitulo()
