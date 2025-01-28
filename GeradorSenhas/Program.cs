@@ -6,7 +6,7 @@ char[] especiais = { '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_',
 
 // Limpa a tela e exibe o título do programa
 Console.Clear();
-Console.ForegroundColor = ConsoleColor.Green; // Define a cor do texto para verde
+Console.ForegroundColor = ConsoleColor.Cyan; // Define a cor do texto para verde
 Console.WriteLine("=".PadLeft(17, '=')); // Exibe uma linha de '='
 Console.WriteLine("Gerador de Senhas");
 Console.WriteLine("=".PadLeft(17, '=')); // Exibe outra linha de '='
@@ -131,6 +131,22 @@ for (int q = 0; q <= qtdEspeciais - 1; q++)
 char[] senha = numerosSenha.Concat(letrasMiSenha).Concat(letrasMaSenha).Concat(especiaisSenha).ToArray(); // Concatena todos os arrays em um único array
 senha = senha.OrderBy(x => aleatorio.Next()).ToArray(); // Embaralha a senha gerada
 
+// Limpa a tela e exibe o título do programa
+Console.Clear();
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("=".PadLeft(17, '='));
+Console.WriteLine("Gerador de Senhas");
+Console.WriteLine("=".PadLeft(17, '='));
+Console.ResetColor();
+
 // Exibe a senha final gerada
-Console.Write("Sua senha: ");
-Console.WriteLine(new string(senha));
+Console.Write("Senha gerada: ");
+// Mostra a senha no console e a salva em um arquivo de texto
+using (StreamWriter writer = new StreamWriter("bkp.txt", append: true))
+{
+    Console.WriteLine(new string(senha));
+    writer.WriteLine(new string(senha));
+}
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("Adicionada ao arquivo 'bkp.txt'.");
+Console.ResetColor();
