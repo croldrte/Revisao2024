@@ -134,18 +134,20 @@ function renderizarProdutos(categoria) {
         : categorias[categoria] || [];
 
     container.innerHTML = produtosFiltrados.length
-        ? produtosFiltrados.map(produto => `
-            <div class="d-flex align-items-center mb-4">
-                <div class="flex-shrink-0">
-                    <img src="${produto.imagem}" alt="${produto.nome}" width="150px">
-                </div>
-                <div class="flex-grow-1 ms-3">
-                    <h5>${produto.nome}</h5>
-                    <p style="font-size: 110%">R$ ${produto.preco.toFixed(2)} <span style="font-size: 85%">(${produto.medida})</span></p>
-                    <p>${produto.descricao}</p>
+        ? `<div class="row">` + produtosFiltrados.map(produto => `
+            <div class="col-md-6 mb-4">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        <img src="${produto.imagem}" alt="${produto.nome}" width="150px">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h5>${produto.nome}</h5>
+                        <p style="font-size: 110%">R$ ${produto.preco.toFixed(2)} <span style="font-size: 85%">(${produto.medida})</span></p>
+                        <p>${produto.descricao}</p>
+                    </div>
                 </div>
             </div>
-        `).join("")
+        `).join("") + `</div>`
         : "<p class='text-center'>Nenhum produto disponível.</p>";
 }
 
