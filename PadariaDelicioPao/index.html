@@ -53,11 +53,12 @@
     </header>
 
     <main>
+        <!-- Banner de Início -->
         <div class="banner">
-            <img src="img/DelícioPão - banner página inicial.jpg" alt="Interior da loja DelícioPão">
+            <img src="img/DelícioPão - banner página inicial.jpg" alt="Interior da padaria DelícioPão">
         </div>
 
-        <!-- Quem somos -->
+        <!-- Quem Somos -->
         <div id="quem-somos">
             <div class="container p-5">
                 <div class="row align-items-center">
@@ -108,6 +109,81 @@
                     <div class="tab-pane fade" id="sweets" role="tabpanel"></div>
                     <div class="tab-pane fade" id="drinks" role="tabpanel"></div>
                 </div>
+            </div>
+        </div>
+
+        <div id="pedidos">
+            <div class="container p-5">
+
+                <h1 class="text-center mb-4">Faça seu pedido</h1>
+
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="row">
+                                <h5 class="mb-3">Cliente</h5>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group mb-3">
+                                        <input type="text" class="form-control" id="name" placeholder="Nome">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input type="tel" class="form-control" id="phone" placeholder="Telefone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group mb-3">
+                                        <input type="text" class="form-control" id="address" placeholder="Endereço">
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control mb-lg-0 mb-3" id="city">
+                                            <option disabled selected>Cidade</option>
+                                            <option>Coronel Fabriciano</option>
+                                            <option>Ipatinga</option>
+                                            <option>Santana do Paraíso</option>
+                                            <option>Timóteo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h5 class="mb-3">Pedido</h5>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group mb-3">
+                                        <input type="date" class="form-control" id="date" min="" max="">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input type="time" class="form-control" id="time" min="06:00" max="22:00"
+                                            step="3600">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <select class="form-control mb-3" id="delivery">
+                                            <option disabled selected>Opção de entrega</option>
+                                            <option>Retirada na loja</option>
+                                            <option>Entrega em casa</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control mb-lg-0 mb-3" id="payment">
+                                            <option disabled selected>Forma de pagamento</option>
+                                            <option>Dinheiro</option>
+                                            <option>Cartão</option>
+                                            <option>Pix</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group">
+                                <textarea class="form-control" id="observations" rows="12"
+                                    placeholder="Descrição do pedido"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
             </div>
         </div>
 

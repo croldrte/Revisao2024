@@ -14,11 +14,6 @@ h1 {
     font-size: 50pt;
 }
 
-h4 {
-    font-weight: 300;
-    color: #aeaeae;
-}
-
 .navbar {
     background-color: var(--espresso);
     color: var(--fluor);
@@ -39,7 +34,7 @@ h4 {
     height: 100%;
 }
 
-#quem-somos {
+#quem-somos, #pedidos {
     background-color: var(--fluor);
     color: var(--espresso);
 }
