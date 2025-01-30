@@ -48,3 +48,18 @@ h4 {
     background-color: var(--espresso);
     color: var(--fluor);
 }
+
+#produtos .nav {
+    --bs-nav-link-color: var(--fluor);
+    --bs-link-hover-color: var(--butter);
+}
+
+#produtos .nav-pills {
+    --bs-nav-pills-link-active-color: var(--espresso);
+    --bs-nav-pills-link-active-bg: var(--butter);
+
+}
+
+#produtos .nav-link.active {
+    font-weight: normal;
+}
