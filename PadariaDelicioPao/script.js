@@ -2,58 +2,58 @@ const produtos = [
     {
         breads: [
             {
-                imagem: 'https://picsum.photos/500?random=1',
+                imagem: 'img/Pão Francês.jpg',
                 nome: 'Pão Francês',
                 preco: 1.50,
                 medida: 'unidade',
-                descricao: 'O tradicional pão francês, fresquinho, crocante por fora e macio por dentro. Ideal para o café da manhã.'
+                descricao: 'O tradicional pão francês, fresquinho, crocante por fora e macio por dentro.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=2',
+                imagem: 'img/Pão de Queijo.jpg',
                 nome: 'Pão de Queijo',
                 preco: 4.00,
                 medida: 'unidade',
-                descricao: 'Pão de queijo quentinho e irresistível, feito com queijo minas e polvilho, perfeito para o café da manhã ou lanche da tarde.'
+                descricao: 'Pão de queijo quentinho e irresistível, feito com queijo minas e polvilho.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=3',
+                imagem: 'img/Pão de Forma.jpg',
                 nome: 'Pão de Forma',
                 preco: 6.90,
                 medida: 'fatia',
                 descricao: 'Pão macio, ideal para sanduíches, disponível em versões integral e branco.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=4',
+                imagem: 'img/Pão Ciabatta.jpg',
                 nome: 'Pão Ciabatta',
                 preco: 7.00,
                 medida: 'unidade',
-                descricao: 'Pão italiano com crosta crocante e miolo aerado, perfeito para acompanhar uma refeição.'
+                descricao: 'Pão italiano com crosta crocante e miolo aerado.'
             }
         ],
         savories: [
             {
-                imagem: 'https://picsum.photos/500?random=5',
+                imagem: 'img/Coxinha de Frango.jpg',
                 nome: 'Coxinha de Frango',
                 preco: 6.00,
                 medida: 'unidade',
                 descricao: 'Massa crocante com recheio generoso de frango desfiado e temperado com carinho.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=6',
+                imagem: 'img/Empada de Palmito.jpg',
                 nome: 'Empada de Palmito',
                 preco: 5.50,
                 medida: 'unidade',
                 descricao: 'Massa amanteigada recheada com palmito refogado, uma verdadeira delícia.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=7',
+                imagem: 'img/Pastel de Queijo.jpg',
                 nome: 'Pastel de Queijo',
                 preco: 7.00,
                 medida: 'unidade',
                 descricao: 'Pastel de massa crocante, recheado com queijo muçarela derretido.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=8',
+                imagem: 'img/Esfiha de Carne.jpg',
                 nome: 'Esfiha de Carne',
                 preco: 4.50,
                 medida: 'unidade',
@@ -62,28 +62,28 @@ const produtos = [
         ],
         sweets: [
             {
-                imagem: 'https://picsum.photos/500?random=9',
+                imagem: 'img/Bolo de Cenoura com Chocolate.jpg',
                 nome: 'Bolo de Cenoura com Chocolate',
                 preco: 5.00,
                 medida: 'fatia',
                 descricao: 'Bolo fofinho de cenoura com cobertura cremosa de chocolate e granulado por cima.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=10',
+                imagem: 'img/Brigadeiro.jpg',
                 nome: 'Brigadeiro',
                 preco: 3.00,
                 medida: 'unidade',
                 descricao: 'O tradicional docinho de brigadeiro feito com leite condensado, chocolate e granulado.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=11',
+                imagem: 'img/Torta de Limão.jpg',
                 nome: 'Torta de Limão',
                 preco: 6.50,
                 medida: 'fatia',
-                descricao: 'Torta de base crocante, recheio cremoso de limão e cobertura de merengue, um clássico irresistível.'
+                descricao: 'Torta de base crocante, recheio cremoso de limão e cobertura de merengue.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=12',
+                imagem: 'img/Churros.jpg',
                 nome: 'Churros',
                 preco: 4.00,
                 medida: 'unidade',
@@ -92,32 +92,32 @@ const produtos = [
         ],
         drinks: [
             {
-                imagem: 'https://picsum.photos/500?random=13',
+                imagem: 'img/Café Expresso.jpg',
                 nome: 'Café Expresso',
                 preco: 3.00,
                 medida: '50ml',
                 descricao: 'Café forte e encorpado, ideal para acompanhar qualquer um de nossos pães.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=14',
+                imagem: 'img/Café com Leite.jpg',
                 nome: 'Café com Leite',
                 preco: 3.00,
                 medida: '80ml',
                 descricao: 'Café suave combinado com leite cremoso, ideal para um lanche da tarde.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=15',
-                nome: 'Suco Natural (laranja, maracujá ou abacaxi)',
+                imagem: 'img/Suco Natural.jpg',
+                nome: 'Suco Natural',
                 preco: 5.00,
                 medida: '200ml',
-                descricao: 'Suco fresco, feito com frutas selecionadas e espremido na hora.'
+                descricao: 'Suco feito com frutas selecionadas e espremido na hora. Opções: laranja, abacaxi, maracujá.'
             },
             {
-                imagem: 'https://picsum.photos/500?random=16',
-                nome: 'Chá Gelado (limão ou pêssego)',
+                imagem: 'img/Chá Gelado.jpg',
+                nome: 'Chá Gelado',
                 preco: 4.50,
                 medida: '200ml',
-                descricao: 'Chá gelado refrescante, ideal para os dias quentes.'
+                descricao: 'Chá gelado refrescante, ideal para os dias quentes. Opções: pêssego, limão.'
             }
         ]
     }
@@ -135,15 +135,15 @@ function renderizarProdutos(categoria) {
 
     container.innerHTML = produtosFiltrados.length
         ? `<div class="row">` + produtosFiltrados.map(produto => `
-            <div class="col-md-6 mb-2">
+            <div class="col-lg-6 px-5 pb-5">
                 <div class="d-flex align-items-center">
                     <div class="flex-shrink-0">
                         <img src="${produto.imagem}" alt="${produto.nome}" width="150px">
                     </div>
-                    <div class="flex-grow-1 ms-3">
+                    <div class="flex-grow-1 ms-4">
                         <h5>${produto.nome}</h5>                        
-                        <p>${produto.descricao}</p>
-                        <p style="font-size: 110%">R$ ${produto.preco.toFixed(2)} <span style="font-size: 85%">(${produto.medida})</span></p>
+                        <p">${produto.descricao}</p>
+                        <p style="color: var(--butter)"><span style="font-weight: normal; font-size: 105%">R$ ${produto.preco.toFixed(2)}</span> <span style="font-size: 85%">(${produto.medida})</span></p>
                     </div>
                 </div>
             </div>

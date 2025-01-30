@@ -57,9 +57,12 @@ h4 {
 #produtos .nav-pills {
     --bs-nav-pills-link-active-color: var(--espresso);
     --bs-nav-pills-link-active-bg: var(--butter);
-
 }
 
 #produtos .nav-link.active {
     font-weight: normal;
+}
+
+#produtos img {
+    border: 4px solid var(--butter);
 }
