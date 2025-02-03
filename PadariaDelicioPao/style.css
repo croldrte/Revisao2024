@@ -34,7 +34,8 @@ h1 {
     height: 100%;
 }
 
-#quem-somos, #pedidos {
+#quem-somos,
+#pedidos {
     background-color: var(--fluor);
     color: var(--espresso);
 }
@@ -60,4 +61,14 @@ h1 {
 
 #produtos img {
     border: 4px solid var(--butter);
+}
+
+#pedidos .btn-primary {
+    --bs-btn-color: var(--espresso);
+    --bs-btn-bg: var(--butter);
+    --bs-btn-border-color: var(--butter);
+    --bs-btn-hover-color: var(--espresso);
+    --bs-btn-hover-bg: #F1B61C;
+    --bs-btn-hover-border-color: #F1B61C;
+    font-weight: normal;
 }
