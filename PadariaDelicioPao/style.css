@@ -72,3 +72,11 @@ h1 {
     --bs-btn-hover-border-color: #F1B61C;
     font-weight: normal;
 }
+
+select:has(option:disabled:checked) {
+    color: var(--bs-secondary-color);
+}
+
+select option {
+    color: black;
+}
