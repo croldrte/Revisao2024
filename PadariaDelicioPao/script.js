@@ -1,3 +1,4 @@
+// Seção Produtos
 const produtos = [
     {
         breads: [
@@ -157,3 +158,33 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarProdutos("sweets");
     renderizarProdutos("drinks");
 });
+
+// Formulário - Seção Pedidos
+
+// Validação Telefone
+$(document).ready(function () {
+    $('#phone').mask('(00) 00000-0000');
+
+    $('#phone').on('blur', function () {
+        var val = $(this).val().replace(/\D/g, '');
+
+        if (val.length < 10) {
+            $(this)[0].setCustomValidity('Número de telefone inválido. O número deve ter pelo menos 10 dígitos.');
+        } else {
+            $(this)[0].setCustomValidity('');
+        }
+    });
+});
+
+// Validação Data
+let tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+let minDate = tomorrow.toISOString().split('T')[0];
+
+let maxDate = new Date();
+maxDate.setDate(maxDate.getDate() + 8);
+maxDate = maxDate.toISOString().split('T')[0];
+
+let dateInput = document.getElementById('date');
+dateInput.setAttribute('min', minDate);
+dateInput.setAttribute('max', maxDate);
