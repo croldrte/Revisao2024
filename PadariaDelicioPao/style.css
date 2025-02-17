@@ -40,7 +40,8 @@ h1 {
     color: var(--espresso);
 }
 
-#produtos {
+#produtos,
+#contato {
     background-color: var(--espresso);
     color: var(--fluor);
 }
